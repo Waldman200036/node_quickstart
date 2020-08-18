@@ -1,18 +1,7 @@
 /* jshint esversion: 8 */
-const model = require('./app.js');
+// const model = require('./app.js');
 const sModel = require('./save');
-/*
-   {
-     $set: {
-       quantity: 500,
-       details: {
-         model: "14Q3",
-         make: "xyz"
-       },
-       tags: ["coats", "outerwear", "clothing"]
-     }
-   }
-*/
+
 const trainee = {
   $set: {
     firstName: 'Jimmy',

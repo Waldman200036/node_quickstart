@@ -19,28 +19,17 @@ const client = new MongoClient(uri, {
 
       // Query for a data
       const filter =
-         {email: trainee.email };
-
+         { email: trainee.$set.email };
+      console.log(trainee.$set.email);
       const data = await collection.findOneAndUpdate(
         filter  , 
-        {
-          $set: {
-            firstName: 'Jimmy',
-            lastName: 'Smith',
-            Organization: 'J6',
-            branch: 'AIR FORCE',
-            facility: 'Bergstrom',
-            email: 'djff.viv@mail.mil',
-            phone: '214-474-5383',
-            date: '8/17/2020',
-            time: '3:30 pm'
-          }
-        }, // Changed in MongoDB 4.2
+        trainee, // Changed in MongoDB 4.2
         {
           upsert: true ,
           returnNewDocument: true ,
         }
       );
+      console.log(data);
       return data;
 
     } finally {
