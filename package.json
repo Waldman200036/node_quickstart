@@ -1,0 +1,29 @@
+{
+  "name": "node_quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "3.6.0",
+    "nodemon": "2.0.4"
+  },
+  "nodemomnConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 3000,
+      "MONGO_ATLAS_PW": "rRfVIkmQFrh7XvmI",
+      "MONGO_ATLAS_UID": "dbAPIUser"
+    }
+  }
+}
