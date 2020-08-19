@@ -12,7 +12,7 @@ class TraineeModel {
             this.time = trainee.time
             // this.trainee = trainee;
     }
-    Trainee() {
+    getUpdate() {
         return {
             $set: {
                 firstName: this.firstName,

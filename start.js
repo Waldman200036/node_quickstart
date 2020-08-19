@@ -12,8 +12,6 @@ var trainee = {
     date: '8/17/2020',
     time: '3:30 pm'
 };
-var TraineeModel = require('./models/TraineeModel');
-const update = new TraineeModel(trainee);
-console.log(update.Trainee());
-// sModel.SaveData(trainee);
+
+ sModel.SaveData(trainee);
 //model.getData();
